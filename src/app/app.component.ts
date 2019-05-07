@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { AlbumList } from './albumList.model';
 import { Album } from './album.model';
 import { Song } from './song.model';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -11,12 +13,13 @@ import { Song } from './song.model';
 })
 
 export class AppComponent {
-  
+
   title = "Benvenuti al canzoniere";
   albums = AlbumList;
   selectedAlbum: Album = AlbumList[0];
   songList: Song[];
- 
+
+
 
   constructor() { }
   ngOnInit() {

@@ -1,9 +1,10 @@
 <div style="text-align:center">
-  <h1>
+  <h1 align="left">
     Welcome to {{ title }}!
   </h1>
 
-  <form>
+  <form align="left" >
+
     <select (change)=onChange($event.target.value)>
       <option [value]="album.id" *ngFor="let album of albums"> {{album.title}}</option>
     </select> <br>
@@ -18,13 +19,14 @@
 
 
   {{selectedRoom | json}}
+<button (click)= "onClick(dettagli-album)"> Dettegli album </button>
 
  <ul>
-   <li *ngFor="let song of songList">
+   <li *ngFor="let song of songList" align="right">
     {{song.album.title}} : {{song | json}}
    </li>
- </ul> 
- 
+ </ul>
+
 
  {{songList | json}}
 

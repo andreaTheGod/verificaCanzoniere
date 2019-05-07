@@ -8,10 +8,12 @@ import {
 FormsModule,
   ReactiveFormsModule
  } from '@angular/forms';
+import { DettagliAlbumComponent } from './dettagli-album/dettagli-album.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DettagliAlbumComponent
   ],
   imports: [
     BrowserModule,
